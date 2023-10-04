@@ -12,4 +12,4 @@ npm run serve / make serve
 ```
 The command in the terminal: control + C
 ```
-## RSS aggregator 
+## RSS aggregator website
