@@ -1,0 +1,19 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "RSS Aggregator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AmiAxe",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmiAxe/frontend-project-11.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AmiAxe/frontend-project-11/issues"
+  },
+  "homepage": "https://github.com/AmiAxe/frontend-project-11#readme"
+}
