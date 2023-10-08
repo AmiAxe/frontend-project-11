@@ -14,4 +14,4 @@ npm run serve / make serve
 The command in the terminal: control + C
 ```
 ## RSS aggregator website
-[Click here](https://frontend-project-11-liard-seven.vercel.app/)
+[Click HERE](https://frontend-project-11-liard-seven.vercel.app/)
