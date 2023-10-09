@@ -24,7 +24,7 @@ const handleLoadingStatus = (state, value, i18, {
       break;
 
     default:
-      break;
+      throw new Error(`Неизвестное значение: ${value}`);
   }
 };
 
