@@ -63,7 +63,7 @@ const renderFeeds = (initialState, i18, { containerFeeds }) => {
     h3.append(p);
     ul.append(li);
   });
-  containerFeeds.innerHTML = '';
+  containerFeeds.textContent = '';
   containerFeeds.append(divFeeds);
   divFeeds.append(div2);
   divFeeds.append(ul);
@@ -99,7 +99,7 @@ const handlePostLink = (initialState, containerPosts) => {
 };
 
 const renderPosts = (initialState, i18, { containerPosts }) => {
-  containerPosts.innerHTML = '';
+  containerPosts.textContent = '';
   const divPosts = document.createElement('div');
   divPosts.classList.add('card', 'border-0');
   const innerDiv = document.createElement('div');
