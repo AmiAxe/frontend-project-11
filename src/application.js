@@ -50,6 +50,8 @@ const loadData = (state, url) => {
 };
 
 const updatePosts = (state) => {
+  const DELAY_TIME = 5000;
+  
   const handler = () => {
     const promises = state.feeds.map(({ url, id }) => axios.get(addProxy(url))
       .then((response) => {
@@ -60,7 +62,7 @@ const updatePosts = (state) => {
         state.posts = [...newPost, ...state.posts];
       })
       .catch((e) => console.error(e)));
-    Promise.all(promises).finally(() => setTimeout(() => handler(), 5000));
+    Promise.all(promises).finally(() => setTimeout(() => handler(), DELAY_TIME));
   };
   handler();
 };
@@ -131,9 +133,11 @@ const app = () => {
 
       elements.containerPosts.addEventListener('click', (e) => {
         const currentId = e.target.dataset.id;
-        watchedState.ui.currentPost = currentId;
-        if (!watchedState.ui.openedPostsId.includes(currentId)) {
-          watchedState.ui.openedPostsId = [currentId, ...watchedState.ui.openedPostsId];
+        if (currentId) {
+          watchedState.ui.currentPost = currentId;
+          if (!watchedState.ui.openedPostsId.includes(currentId)) {
+            watchedState.ui.openedPostsId = [currentId, ...watchedState.ui.openedPostsId];
+          }
         }
       });
 
