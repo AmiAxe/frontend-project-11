@@ -50,6 +50,7 @@ const loadData = (state, url) => {
 };
 
 const updatePosts = (state) => {
+  const delayTime = 5000;
   const handler = () => {
     const promises = state.feeds.map(({ url, id }) => axios.get(addProxy(url))
       .then((response) => {
@@ -60,7 +61,7 @@ const updatePosts = (state) => {
         state.posts = [...newPost, ...state.posts];
       })
       .catch((e) => console.error(e)));
-    Promise.all(promises).finally(() => setTimeout(() => handler(), 5000));
+    Promise.all(promises).finally(() => setTimeout(() => handler(), delayTime));
   };
   handler();
 };
