@@ -133,11 +133,9 @@ const app = () => {
 
       elements.containerPosts.addEventListener('click', (e) => {
         const currentId = e.target.dataset.id;
-        if (currentId) {
-          watchedState.ui.currentPost = currentId;
-          if (!watchedState.ui.openedPostsId.includes(currentId)) {
-            watchedState.ui.openedPostsId = [currentId, ...watchedState.ui.openedPostsId];
-          }
+        watchedState.ui.currentPost = currentId;
+        if (!watchedState.ui.openedPostsId.includes(currentId)) {
+          watchedState.ui.openedPostsId = [currentId, ...watchedState.ui.openedPostsId];
         }
       });
 
